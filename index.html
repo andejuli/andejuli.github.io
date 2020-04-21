@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" Assignment portal for Susan Smith in WDD 230: Web Frontend Development at Brigham Young University - Idaho>
+    <title>CIT230 Portal Page</title>
+</head>
+<body>
+    <head>
+        <h1>Julie Ann Anderson</h1>
+    </head>
+    <main>
+        <h2>CIT 230: Assignment Portal</h2>
+      <ul>
+          <li>Lesson 02:<a href="#">Assignment Link</a></li>
+          <li>Lesson 03:<a href="#">Assignment Link</a></li>
+          <li>Lesson 04:<a href="#">Link</a> | <a href="#">Link</a></li>
+      </ul>
+    </main>
+    <footer>
+        <p>&copy | Julie Ann Anderson | BYUI Remote Learning</p>
+        <p>Last Updated: <span id="modified"></span></p>
+    </footer>
+    <script>
+        let currentdate = document.lastModified;
+        document.getElementById("modified").textContent = currentdate;
+    </script>
+</body>
+</html>
