@@ -5,11 +5,20 @@ body {
 main {
     padding: 10px 50px;
 }
+img {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
 h1, footer {
+    margin: 0;
     background-color: #326477;
     color: white;
     padding: 10px;
     text-align:center; 
+}
+h2 {
+    text-align: center;
 }
 footer a {
     color: white;
