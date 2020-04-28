@@ -2,46 +2,32 @@
 body {
     font-family: Raleway, san-serif;
 }
+#content {
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+}
 main {
     padding: 10px 50px;
 }
-img {
-    width: 30%;
-    display: block;
-    margin: 0 auto;
-}
 h1, footer {
-    margin: 0;
     background-color: #326477;
     color: white;
     padding: 10px;
-    text-align:center; 
-}
-h2 {
-    text-align: center;
+    text-align:center;
+    border-radius: 15px;
 }
 footer a {
     color: white;
+}
+img{
+    float: right;
+    width: 20%;
+    border-radius: 5px;
 }
 li {
     padding: 5px 0;
 }
 li a, li a:visited{
     color: #326477;
-}
-
-@media screen and (min-width: 500px) {
-    #content {
-        width: 80%;
-        max-width: 1000px;
-        margin: 50px auto;
-    }
-    h1, footer {
-        border-radius: 15px;
-    }
-    img{
-        float: right;
-        width: 20%;
-        border-radius: 5px;
-    }
 }
