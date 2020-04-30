@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+h1, h2, h3{
+    font-family: Marcellus, serif;
+    text-align: center;
+}
+p {
+    text-align: center
+}
+h1 {
+    
+    padding: 30px;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
+a {
+    color: gray;
+}
+
+section {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 400px;
+    width: 95%;
+}
+hr {
+    margin-bottom: 60px;
+}
+
+@media screen and (min-width: 500px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 45px;
+    }
+    img {
+        max-width: 400px;
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 45px;
+    }
+    p {
+        margin: 20px;
+        line-height: 1.5em;
+        font-size: 1.1em;
+    }
+}

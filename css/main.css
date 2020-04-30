@@ -38,7 +38,7 @@ li a, li a:visited{
     color: #326477;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 500px) { 
     #content {
         width: 80%;
         max-width: 1000px;
@@ -53,3 +53,8 @@ li a, li a:visited{
         border-radius: 5px;
     }
 } 
+
+@media screen and (min-width: 700px) {
+
+    
+}
