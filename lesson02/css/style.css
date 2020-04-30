@@ -5,10 +5,14 @@ h1, h2, h3{
     text-align: center;
 }
 p {
-    text-align: center
+    text-align: center;
+    padding: 15px;
+    line-height: 1.5em;
+    font-size: 1.1em;
 }
 h1 {
-    
+    color: white;
+    background-color: gray;
     padding: 30px;
 }
 img {
@@ -33,7 +37,7 @@ hr {
     margin-bottom: 60px;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 550px) {
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -51,9 +55,5 @@ hr {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 45px;
     }
-    p {
-        margin: 20px;
-        line-height: 1.5em;
-        font-size: 1.1em;
-    }
+
 }
