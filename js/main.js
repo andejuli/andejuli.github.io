@@ -1,5 +1,5 @@
 let currentdate = document.lastModified;
-document.getElementById("modified").textContent = currentdate;
+document.getElementById("modified").innerHTML = currentdate;
 
 /*var options = {month: "numeric", day: "numeric", year: "numeric", hour: "numeric", minute: "numeric"};
 var d = new Date().toLocaleDateString('en-US', options);
