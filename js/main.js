@@ -1,6 +1,6 @@
-/*let currentdate = document.lastModified;
-document.getElementById("modified").textContent = currentdate;*/
+let currentdate = document.lastModified;
+document.getElementById("modified").textContent = currentdate;
 
-var options = {month: "numeric", day: "numeric", year: "numeric", time: "numeric"};
+/*var options = {month: "numeric", day: "numeric", year: "numeric", hour: "numeric", minute: "numeric"};
 var d = new Date().toLocaleDateString('en-US', options);
-document.getElementById("modified").textContent = d ;
+document.getElementById("modified").textContent = d;*/
