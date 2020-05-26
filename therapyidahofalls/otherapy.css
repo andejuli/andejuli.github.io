@@ -1,0 +1,275 @@
+*{
+    margin:0;
+    padding:0;
+}      
+html {
+    width: 100%
+}
+body {
+    font-family:"Open Sans",Helvetica,Sans-serif;
+    color:#fff;
+    background-color: rgba(46, 52, 54, .95);
+
+}
+#wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+nav{
+    background-color: rgba(46, 52, 54, .95);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav a {
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+}
+a, a:visiter, a:hover, a:active {
+    text-decoration: none;
+}
+nav a:hover {
+    color: rgba(192, 192, 192, .5);
+}
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+}
+.mySlides {
+    display: none;
+    max-width: 1000px;
+    width: 100%
+}
+
+h2{
+    font-size: 1.2em;
+    font-family: Georgia, serif;
+    width: 25%;
+    display: inline-block;
+    line-height: 2em;
+    letter-spacing: .1em;
+}
+h3 {
+    font-family: Georgia, serif;
+    font-size: 1.3em;
+    color: #6cd9be;
+    padding: 1.75em;
+    letter-spacing: .15em;
+    display: inline-block;
+}
+h4 {
+    font-family: Georgia, serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    color: #6cd9be;
+}
+
+
+h1 {
+    padding: 30px 0;
+}
+header {
+    width: 100%;
+}
+.content{
+    text-align:center;
+    margin: 0 auto;
+   
+}
+.content div{
+    width: 80%;
+    text-align:center;
+    margin: 0 auto;
+}
+.slides{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    height: 665px;
+    background-color: rgba(192, 192, 192);
+}
+#wrapper{
+    max-width: 1200px;
+    width: 100%;
+}
+#wrapper .mySlides {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+div h2 {
+    margin: 25px 0;
+}
+#tagline {
+    width: 75%;
+}
+h2 img {
+    width: 40%;
+}
+hr {
+    width: 80%;
+    margin: 40px auto 40px auto;
+}
+
+.TD-grid {
+    max-width: 1200px;
+    width: 100%;
+  }
+  .member {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(192, 192, 192);
+      padding: 20px;
+  }
+  .member img {
+      max-width: 300px;
+      width: 90%;
+      padding: 15px;
+  }
+
+  .TD-headline-main,.np_headline_main, .home-headline-1, .contact {
+    width: 100%;
+    background-color:  rgba(192, 192, 192);
+    color: black;
+    border-top: 5px double;
+    border-bottom: 5px double;
+    text-align: center;
+    margin: 45px 0 0 0;
+    font-size: 1.8em;
+  }
+  
+  .TD-headline {
+    max-width: 1200px;
+    width: 85%;
+    background-color:  rgba(192, 192, 192);
+    color: black;
+    border-top: 5px double;
+    border-bottom: 5px double;
+    margin-top: 80px;
+  }
+  
+  .TD-paragraph {
+    color: black;
+    padding: 5px;
+    line-height: 1.4em;
+  }
+.np_content {
+    text-align: center;
+    width: 90%;
+    padding: 30px;
+}
+.np_content a {
+    color: #6cd9be
+}
+#new_patients img{
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+}
+#links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.home-headline-1 {
+    margin-bottom: 40px;
+}
+#links container {
+    width: 250px;
+    background-color: rgba(192, 192, 192);
+    padding: 20px;
+    margin: 20px;
+}
+#links img{
+    width: 220px;
+    display: block;
+    margin: 0 auto;
+}
+#links ul {
+    list-style: none;
+    padding-top: 20px;
+}
+#links ul a {
+    color: black;
+    line-height: 2.5em;
+    font-size: 1.1em;
+}
+.contact_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.contact_wrap img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.contact_wrap div {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+footer {
+    text-align: center;
+    padding-top: 15px;
+    margin-top: 40px;
+    height: 35px;
+    color: #000000;
+    background-color: rgba(192, 192, 192, .5);
+}
+
+
+@media only screen and (max-width: 1100px) {
+    
+    hr {
+    width: 80%;
+    margin: 20px auto 20px auto;
+    }
+    .slides {
+        height: 450px;
+    }
+    .member {
+        flex-direction: column;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    nav a {
+        padding: 14px 15px;
+        font-size: .8em;
+    }
+    .member, .content div {
+        flex-direction: column;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .member img {
+        width: 100%;
+    }
+    #contact h3 {
+        font-size: .9em;
+    }
+    .slides{
+        width: 100%;
+        margin: 20px auto 0 auto;
+        height: 210px;
+        background-color: rgba(192, 192, 192);
+    }
+    #contact_wrap img {
+        width: 100%;
+    }
+    h3 a {
+        color:  #6cd9be;
+    }
+}

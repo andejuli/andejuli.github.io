@@ -1,0 +1,41 @@
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+li {
+    padding: 15px;
+    display: none;
+}
+li:first-child {
+    display: block;
+}
+.responsive li {
+    display: block;
+}
+
+.parent {
+    position: relative;
+    background-color: lightblue;
+    width: 100%;
+    height: 400px;
+}
+.child {
+    position: absolute; 
+    background-color: rgba(0, 0, 255, .5);
+    width: 300px;
+    top: 100px;
+    left: 50px;
+}
+
+@media screen and (min-width: 550px) {
+    ul {
+        flex-direction: row;
+    }
+    li:first-child {
+        display: none;
+    }
+    li {
+        display: block;
+    }
+}
