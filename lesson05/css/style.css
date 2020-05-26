@@ -71,7 +71,7 @@ nav li {
 }
 nav li a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 1.2em;
 }
 nav li:hover {
@@ -85,9 +85,6 @@ nav li:first-child {
 }
 nav .active{
     background-color: #ccc;
-}
-nav .active a {
-    color: black;
 }
 .responsive li {
     display: block;
@@ -112,7 +109,6 @@ nav .active a {
     margin: 0;
     background-color: #26a6d1;
     padding: 5px;
-    color: white;
 }
 .forecast img {
     width: 90px;
@@ -168,7 +164,6 @@ footer {
 footer p {
     margin: 0;
     padding: 10px;
-    color: white;
     text-align: center;
 }
 #date {
