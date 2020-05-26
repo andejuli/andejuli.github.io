@@ -148,6 +148,7 @@ nav .active a {
     width: 100%;
     margin: 20px auto;
     background-color: #A3E8FF;
+    padding-left: 50px;
 }
 .contact {
     padding-left: 20px;
