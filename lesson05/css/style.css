@@ -121,6 +121,9 @@ nav .active a {
 .forecast p {
     margin: 0 0 8px 0;
 }
+.prestonarticle {
+    margin: 60px auto;
+}
 .prestonarticle img {
     display: block;
     width: 80%;
@@ -130,7 +133,7 @@ nav .active a {
     margin: 20px;
 }
 .prestonarticle p {
-    padding: 20px;
+    padding: 0 20px;
 }
 .contentbox {
     margin: 10px auto;
@@ -148,7 +151,7 @@ nav .active a {
 }
 .contact {
     padding-left: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
 }
 .contact img {
     width: 20px;
