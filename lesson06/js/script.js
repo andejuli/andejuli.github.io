@@ -16,29 +16,10 @@ const dateoutput = document.querySelector('#date');
 dateoutput.textContent = weekname + ", " + mydate.getDate() + " " + monthname + " " + mydate.getFullYear();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Saturday Pancakes message on Fridays */
 pancakes();
 function pancakes() {
-if (weekname == 'Thursday'){
+if (weekname == 'Friday'){
     // get the friday div element so we can do something with it.
     const fridaydiv = document.getElementById('friday');
     // make the friday element visible.
@@ -47,3 +28,12 @@ if (weekname == 'Thursday'){
     document.body.classList.toggle('movedown');
     }
 };
+
+/* Calculating Windchill */
+wind= document.getElementById("wind").textContent ;
+temp= document.getElementById("temp").textContent ;
+chill=(0.0817*(3.71*(Math.pow(wind, 0.5))+
+5.81-0.25*wind)*(temp-91.4)+91.4);
+document.getElementById("chill").textContent= chill;
+
+ 
