@@ -21,10 +21,9 @@ figure {
     width: 100%;
     margin: 0 auto;
 }
-figure img:hover {
-    box-shadow: 0 0 15px #333;
-}
+
 figcaption {
+    display: none;
     text-align: center;
     padding: 5px;
 }
@@ -48,5 +47,10 @@ img {
     main {   
         grid-template-columns: 1fr 1fr 1fr; 
     }
-
+    figure img:hover {
+        box-shadow: 0 0 15px #333;
+    }
+    figcaption {
+        display: block;
+    }
 }
