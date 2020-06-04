@@ -1,4 +1,3 @@
-alert('hi');
 const images = document.querySelectorAll('[data-src]');
 
 function preloadImage(img){
@@ -23,7 +22,7 @@ const io = new IntersectionObserver (
             } else {
                 console.log(entry.target);
                 preloadImage(entry.target);
-                // io.unobserve(entry.target); 
+                io.unobserve(entry.target); 
             }
         });     
     }, options
@@ -33,3 +32,6 @@ const io = new IntersectionObserver (
 images.forEach(image => {
     io.observe(image);
 });
+
+
+/* https://www.smashingmagazine.com/2018/01/deferring-lazy-loading-intersection-observer-api/ */
