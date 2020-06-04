@@ -23,7 +23,7 @@ const io = new IntersectionObserver (
             } else {
                 console.log(entry.target);
                 preloadImage(entry.target);
-                io.unobserve(entry.target); 
+                // io.unobserve(entry.target); 
             }
         });     
     }, options
