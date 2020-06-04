@@ -2,7 +2,7 @@ alert('hi');
 const images = document.querySelectorAll('[data-src]');
 
 function preloadImage(img){
-    const source = img.getAttribute("data-src");
+    const source = img.getAttribute('data-src');
     if(!source) {
         return;
     }
@@ -11,8 +11,8 @@ function preloadImage(img){
 }
 
 const options = {
-    threshold: .2
-    
+    threshold: .5,
+    rootMargin: "-50px"
 };
 
 const io = new IntersectionObserver (
@@ -21,12 +21,15 @@ const io = new IntersectionObserver (
             if (!entry.isIntersecting) {
                 return;
             } else {
+                console.log(entry.target);
                 preloadImage(entry.target);
-                io.unobserve(entry.target);
+                io.unobserve(entry.target); 
             }
-        });
-    }, options);
+        });     
+    }, options
+);
+
 
 images.forEach(image => {
-    io.observe(image)
+    io.observe(image);
 });
