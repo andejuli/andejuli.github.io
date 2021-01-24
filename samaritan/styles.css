@@ -138,9 +138,13 @@ h3.wounded-text, h3.priest-text, h3.levite-text, h3.levite-text, h3.samaritan-te
     padding-right: 50px;
     text-align: center;
 }
-.scroll-box1, .scroll-box2, .scroll-box3, .scroll-box4 {
+.scroll-box1, .scroll-box2, .scroll-box3 {
     
     height: 200vh;
+}
+
+.scroll-box4 {
+    height: 300vh;
 }
 .panel {
     height: 100vh;
