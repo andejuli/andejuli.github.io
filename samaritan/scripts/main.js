@@ -3,7 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 setTimeout(function(){
     let title = document.querySelector('.title');
     title.setAttribute('style', 'visibility: visible;');
-}, 3000);
+}, 3500);
 document.addEventListener('load', setTimeout);
 
 function setVisible(){
