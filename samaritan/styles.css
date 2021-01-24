@@ -8,7 +8,7 @@
 .main-scroll {
     background-image: url(images/wounded.png), url(images/path.png);
     background-repeat: no-repeat, no-repeat; 
-    background-size: auto, cover;
+    background-size: auto, fit;
     background-color: #e9e0d0;
     background-attachment: fixed;
     background-position: 50% 90%;
