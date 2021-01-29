@@ -116,7 +116,7 @@ h2 {
     font-size: 2em;
 }
 h3 {
-    line-height: 1.6em;
+    line-height: 1.7em;
     margin-bottom: 75px;
     padding: 20px;
     font-size: 1.2em;
@@ -137,7 +137,6 @@ h3.wounded-text, h3.priest-text, h3.levite-text, h3.levite-text, h3.samaritan-te
     padding-left: 50px;
     padding-right: 50px;
     text-align: center;
-    line-height: 2em;
 }
 .scroll-box1, .scroll-box2, .scroll-box3 {
     
@@ -160,4 +159,56 @@ h3.wounded-text, h3.priest-text, h3.levite-text, h3.levite-text, h3.samaritan-te
     line-height: 2em;
     padding-bottom: 0;
     margin-bottom: 0;
+}
+
+@media screen and (max-width: 750px) {
+    .main-scroll {
+        background-image: url(images/wounded.png), url(images/path.png);
+        background-repeat: no-repeat, no-repeat; 
+        background-size: auto, fit;
+        background-color: #e9e0d0;
+        background-attachment: fixed;
+        background-position: 50% 100%;
+    
+    }
+    h3 {
+    line-height: 1.7em;
+    margin-bottom: 75px;
+    padding: 20px;
+    font-size: 1em;
+    }
+    .scroll-box4 h3 {
+        margin-top: -30px;
+    }
+    .samaritan {
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    h3 {
+        line-height: 1.7em;
+        margin-bottom: 75px;
+    
+        font-size: 1em;
+        }
+    h3.wounded-text, h3.priest-text, h3.levite-text, h3.levite-text, h3.samaritan-text {
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+    }
+    .scroll-box4 h3 {
+        margin-top: -30px;
+        font-size: .9em;
+    }
+    .panel h2 {
+        padding-top: 300px;
+        text-align: center;
+        margin: 40px;
+        line-height: 2em;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
 }
