@@ -134,8 +134,8 @@ h3 {
 h3.wounded-text, h3.priest-text, h3.levite-text, h3.levite-text, h3.samaritan-text {
     padding-bottom: 50px;
     margin-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
     text-align: center;
 }
 .scroll-box1, .scroll-box2, .scroll-box3 {
@@ -165,7 +165,7 @@ h3.wounded-text, h3.priest-text, h3.levite-text, h3.levite-text, h3.samaritan-te
     .main-scroll {
         background-image: url(images/wounded.png), url(images/path.png);
         background-repeat: no-repeat, no-repeat; 
-        background-size: auto, fit;
+        background-size: 25%, cover;
         background-color: #e9e0d0;
         background-attachment: fixed;
         background-position: 50% 100%;
@@ -175,7 +175,7 @@ h3.wounded-text, h3.priest-text, h3.levite-text, h3.levite-text, h3.samaritan-te
     line-height: 1.7em;
     margin-bottom: 75px;
     padding: 20px;
-    font-size: 1em;
+    font-size: .9em;
     }
     .scroll-box4 h3 {
         margin-top: -30px;
