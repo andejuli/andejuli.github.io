@@ -168,7 +168,7 @@ h3.wounded-text, h3.priest-text, h3.levite-text, h3.levite-text, h3.samaritan-te
         background-size: 80%, cover;
         background-color: #e9e0d0;
         background-attachment: fixed;
-        background-position: center bottom;
+        background-position: center center;
     
     }
     h3.wounded-text, h3.priest-text, h3.levite-text, h3.levite-text, h3.samaritan-text {
