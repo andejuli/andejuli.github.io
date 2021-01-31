@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .main-scroll {
@@ -9,9 +9,9 @@
     background-repeat: no-repeat; 
     background-size: contain;
     background-color: #e9e0d0;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-position: center center;
-    
+    height: 100vh;
    
 }
 
@@ -38,8 +38,8 @@ h3.wounded-text {
     text-align: center;
 }
 .scroll-box1 {
+    position: fixed;
     
-    height: 200vh;
 }
 /* .scroll-box1 .wounded-text {
     position: relative;
