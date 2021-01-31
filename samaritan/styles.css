@@ -163,9 +163,9 @@ h3.wounded-text, h3.priest-text, h3.levite-text, h3.levite-text, h3.samaritan-te
 
 @media screen and (max-width: 750px) {
     .main-scroll {
-        background-image: url(images/wounded.png), url(images/path.png);
+        background-image: url(images/wounded.png), url(images/pathsm.png);
         background-repeat: no-repeat, no-repeat; 
-        background-size: 95%, cover;
+        background-size: 80%, cover;
         background-color: #e9e0d0;
         background-attachment: fixed;
         background-position: center bottom;
