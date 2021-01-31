@@ -5,12 +5,12 @@
 }
 
 .main-scroll {
-    background-image: url(images/wounded.png), url(images/path.png);
-    background-repeat: no-repeat, no-repeat; 
-    background-size: auto, cover;
+    background-image: url(images/path.png);
+    background-repeat: no-repeat; 
+    background-size: cover;
     background-color: #e9e0d0;
     background-attachment: fixed;
-    background-position: 50% 90%;
+    background-position: center center;
 
 }
 
@@ -48,12 +48,12 @@ h3.wounded-text {
 
 @media screen and (max-width: 750px) {
     .main-scroll {
-        background-image: url(images/wounded.png), url(images/pathsm.png);
-        background-repeat: no-repeat, no-repeat; 
-        background-size: 80%, cover;
+        background-image: url(images/pathsm.png);
+        background-repeat: no-repeat; 
+        background-size: cover;
         background-color: #e9e0d0;
         background-attachment: fixed;
-        background-position: bottom center;
+        background-position: center center;
     
     }
     h3.wounded-text {
