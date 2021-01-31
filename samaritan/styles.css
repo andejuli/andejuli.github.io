@@ -165,11 +165,15 @@ h3.wounded-text, h3.priest-text, h3.levite-text, h3.levite-text, h3.samaritan-te
     .main-scroll {
         background-image: url(images/wounded.png), url(images/path.png);
         background-repeat: no-repeat, no-repeat; 
-        background-size: 25%, cover;
+        background-size: 95%, cover;
         background-color: #e9e0d0;
         background-attachment: fixed;
-        background-position: 50% 100%;
+        background-position: center bottom;
     
+    }
+    h3.wounded-text, h3.priest-text, h3.levite-text, h3.levite-text, h3.samaritan-text {
+        padding-left: 50px;
+        padding-right: 50px;
     }
     h3 {
     line-height: 1.7em;
