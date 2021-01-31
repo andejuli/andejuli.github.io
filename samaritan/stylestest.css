@@ -7,7 +7,7 @@
 .main-scroll {
     background-image: url(images/path.png);
     background-repeat: no-repeat; 
-    background-size: cover;
+    background-size: contain;
     background-color: #e9e0d0;
     background-attachment: fixed;
     background-position: center center;
@@ -50,7 +50,7 @@ h3.wounded-text {
     .main-scroll {
         background-image: url(images/pathsm.png);
         background-repeat: no-repeat; 
-        background-size: cover;
+        background-size: contain;
         background-color: #e9e0d0;
         background-attachment: fixed;
         background-position: center center;
