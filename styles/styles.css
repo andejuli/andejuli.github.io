@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lemon&family=Rock+Salt&display=swap');
+body {
+    background-color: #fcfbfb;
+    font-family: Lato, arial, sans-serif;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+#banner {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+}
+#banner-img {
+    width: 100%;
+    grid-column: 1/8;
+    grid-row: 1/4;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    grid-column: 1/8;
+    grid-row: 1/2;
+}
+#banner-msg {
+    grid-column: 2/7;
+    grid-row: 2/3;
+}
+#banner-msg h1, #banner-msg h4 {
+    text-align: center;
+    margin: .5em;
+}
+h1 {
+    font-family: 'Lemon', 'Bradley Hand', sans-serif;
+    font-size: 45px;
+    color: #4b4b2a;
+   
+}
+/* Header */
+ol {
+    display: grid;
+    grid-template-columns: 80px auto;
+}
+img.logo {
+    width: 80px;
+}
+/* Navigation */
+nav ol{
+    display: grid; /* using grid to layout the links horizontally */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    background-color: rgba(255,255,255, 0.5);
+    padding: 0 0 0 100px;
+    margin-top: 0;
+    align-items: center;
+}
+nav li a {
+   text-decoration: none;
+   color: #4b4b2a;
+   padding: 25px;
+   
+}
+nav li a:hover {
+    color: black;
+    background-color: rgba(255,255,255, 0.3); 
+}
+button{
+    text-align: center;
+    width: 100%;
+    background-color: #5aa2dc;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+#button {
+    width: 200px;
+    margin: 0 auto;
+    
+}
+button:hover {
+    background-color: #4b4b2a9d;
+}
