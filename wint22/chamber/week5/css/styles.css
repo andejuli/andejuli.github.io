@@ -246,7 +246,12 @@ nav li:first-child {
     box-shadow: 0 0 10px#FAD4C8; 
     border-radius: 10px;
 }
-#join #btn {
+#btn2 {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+#join #btn, #btn2 {
     background-color: #FAD4C8;
     padding: 20px; 
     box-shadow: 0 0 10px#FAD4C8; 
@@ -259,7 +264,7 @@ nav li:first-child {
 #hero img {
     width: 100%;
 }
-#btn a{
+#btn a, #btn2 a{
     text-decoration: none;
     color: black;
     font-size: 1.2em;
