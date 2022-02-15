@@ -4,7 +4,7 @@
 
       button.addEventListener('click', function() {
         let myItem = input.value;
-        input.value = '';
+        
 
         const listItem = document.createElement('li');
         const listText = document.createElement('span');
@@ -21,4 +21,5 @@
         })
 
         input.focus();
+        input.value = '';
       });

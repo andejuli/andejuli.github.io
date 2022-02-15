@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Load</title>
+    <style>
+        picture img {
+        display: block;
+        margin: 0 auto;
+        padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div>
+          <label for="bgcolor">Choose background color:</label>
+          <input class="color" id="bgcolor" value="0000FF">
+        </div>
+        
+      </form>
+  
+    <h1></h1>
+    <picture>
+        <img src="https://dummyimage.com/300x400/ccc/fff" 
+  data-src="https://placekitten.com/300/400" alt="kitten">
+  </picture>
+  <picture>
+    <img src="https://dummyimage.com/300x400/ccc/fff" 
+data-src="https://placekitten.com/300/400" alt="kitten">
+</picture>
+<picture>
+    <img src="https://dummyimage.com/300x400/ccc/fff" 
+data-src="https://placekitten.com/300/400" alt="kitten">
+</picture>
+<picture>
+    <img src="https://dummyimage.com/300x400/ccc/fff" 
+data-src="https://placekitten.com/300/400" alt="kitten">
+</picture>
+<picture>
+    <img src="https://dummyimage.com/300x400/ccc/fff" 
+data-src="https://placekitten.com/300/400" alt="kitten">
+</picture>
+<picture>
+    <img src="https://dummyimage.com/300x400/ccc/fff" 
+data-src="https://placekitten.com/300/400" alt="kitten">
+</picture>
+
+    <script>
+        const images = document.querySelectorAll('[data-src]');
+
+function preloadImage(img){
+    const source = img.getAttribute("data-src");
+    if(!source) {
+        return;
+    }
+
+    img.src = source; //change the src from placeholder to data-src of kitten image
+}
+
+const options = {
+    threshold: 1, //100% into viewport just so we can see it happening
+    rootMargin: "0px 0px 100px 0px" //so when image is 100 px before viewport
+};
+
+const io = new IntersectionObserver (
+    (entries, io) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                preloadImage(entry.target); //call a function called preloadImage
+                io.unobserve(entry.target); //stop observing it
+            }
+        });
+}, options);
+
+images.forEach(image => {
+    io.observe(image)
+});
+
+
+
+// First:
+
+var body = document.querySelector('body');
+
+
+localStorage.setItem('bgcolor', 'ccc');
+
+var currentColor = localStorage.getItem('bgcolor');
+
+body.style.backgroundColor = '#' + currentColor;
+
+
+
+// Second:
+
+var bgcolorForm = document.getElementById('bgcolor');
+
+
+if(!localStorage.getItem('bgcolor')) {
+  populateStorage();
+} else {
+  setStyles();
+}
+
+function populateStorage() {
+  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
+
+  setStyles();
+}
+
+function setStyles() {
+  var currentColor = localStorage.getItem('bgcolor');
+  
+
+  document.getElementById('bgcolor').value = currentColor;
+  
+
+  body.style.backgroundColor = '#' + currentColor;
+
+}
+
+bgcolorForm.onchange = populateStorage;
+
+
+// function(timestamp1, timestamp2) {
+//     var difference = timestamp1 - timestamp2;
+//     var daysDifference = Math.floor(difference/1000/60/60/24);
+
+//     return daysDifference;
+// }
+
+    </script>
+</body>
+</html>

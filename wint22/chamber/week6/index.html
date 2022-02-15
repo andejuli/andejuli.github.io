@@ -10,24 +10,30 @@
     <link rel="icon"  href="images/favicon.ico">
 </head>
 <body>
-    <header>
+    <div id='content'>
+    <div id='top'>
         <img id="logo" src="images/logo.png" alt="weather logo">
-        <section class="headings">
-            <h1>Ammon Chamber of Commerce </h1>
-        </section>
-    </header>
-    <nav class="navigation">
-        <ul>
-            <li><a class="ham" href="#">&#9776; Menu</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Discover</a></li>
-            <li><a href="#">Directory</a></li>
-            <li><a href="#">Join</a></li>
-            <li><a href="#">Contact</a></li>
-            
-        </ul>
-    </nav>
-    <div id='announce'>
+        <header>
+            <h1>Ammon</h1>
+            <p>Chamber of Commerce</p>
+        </header> 
+        <nav class="navigation">
+            <ul>
+                <li><a class="ham" href="#"><span>&#9776;</span><span>X</span></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Contact</a></li>
+                
+            </ul>
+        </nav>
+        <div id='social'>
+            <img src="images/facebook.png" width='50' alt="social media holder">
+            <img src="images/twitter.png" width='50' alt="social media holder">
+        </div>
+    </div>
+    <div id='msg-box'>
         <p id='msg'>Come join us for the chamber meet and greet Wednesday at 7:00 p.m.</p>
     </div>
     <main>
@@ -41,23 +47,27 @@
             <h3>Weather</h3>
             <div class='temp'>
                 <img src="images/weather-icon.png" alt="sun and cloud weather icon">
-                <p>33&#8451;</p>
+                <p id="t">33</p><p><span>&#8451;</span></p>
                 
             </div>
             <hr>
                 <p>
-                <p>Wind Speed:<span>2.5km/h</span></p>
-                <p>Wind Chill:<span>N/A</span></p>
+                <p>Wind Speed:</p><p><span id='ws'>2.5</span><span>km/h</span></p>
+                <p>Wind Chill:<span id='wc'>N/A</span></p>
             
         </div>
         <div class='parts' id='join'>
-            <div id='btn'>
+            <button id='btn2'>
                 <a class="join" href='#'>Join Us!</a>
-            </div>
+            </button>
             <p>Discover how to join the chamber of commerce and how it will benefit your organization!</p>
         </div>
         <div class='parts' id='hero'>
-            
+            <picture>
+                <source media="(min-width:900px)" srcset="images/long.jpg">
+                <source media="(min-width:550px)" srcset="images/large.jpg">
+                <img src="images/phone.jpg" alt="Ammon city">
+            </picture>
             <h2>Welcome to Ammon</h2>
             <div id='btn'>
                 <a class="join" href='#'>Join the Chamber</a>
@@ -96,7 +106,7 @@
         
     </main>
     <footer>
-        <div id='top'>
+        <div id='top-footer'>
             <img id="logo" src="images/logo-w.png" alt="weather logo">
             <div>
                 <h3>Ammon Chamber of Commerce</h3><p>124 Street, Ammon, Id</p>
@@ -113,6 +123,7 @@
             
         </div>
     </footer>
+  </div>
   <script src="scripts/scripts.js"></script>
 </body>
 </html>

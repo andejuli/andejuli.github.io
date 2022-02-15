@@ -21,7 +21,12 @@
 const hamburgerBtn = document.querySelector('.ham');
 const navigation = document.querySelector('.navigation')
 
-hamburgerBtn.addEventListener('click', () => {navigation.classList.toggle('responsive')}, false);
+function toggleMenu() {
+    navigation.classList.toggle('responsive');
+    hamburgerBtn.classList.toggle('responsive');
+}
+
+hamburgerBtn.addEventListener('click', toggleMenu, false);
 
 
 
@@ -40,8 +45,46 @@ dateoutput.textContent = weekname + ", " + mydate.getDate() + " " + monthname + 
 
 
 //to show mon tues announcement message
-const message = document.querySelector('#announce');
+const parent = document.querySelector('#msg-box');
+
+
 
 if (mydate.getDay() == 1 || mydate.getDay() == 2) {
-    message.style.display = 'block';
+
+    parent.style.display = 'block';
 }
+
+// const joinbtn = document.querySelector('.join');
+// const announcement = document.querySelector('#a');
+
+// function takeAway(){
+//     //message.style.display = 'none';
+//     announcement.removeChild(announcement.childNodes[0]);
+// }
+
+// joinbtn.addEventListener('click', takeAway);
+
+
+const msg = document.querySelector('#msg');
+
+const btn = document.querySelector('#btn');
+
+
+function takeAway() {
+    
+parent.style.display = 'none';
+// parent.removeChild(msg);
+};
+
+btn.addEventListener('click', takeAway);
+
+// windchill calc
+
+const temp = document.querySelector('#t').textContent;
+const windspeed = document.querySelector('#ws').textContent;
+
+let chill=Math.round((35.74 + (0.6215 * temp))-(35.75 * Math.pow(windspeed,0.16)) + (0.4275*temp*Math.pow(windspeed,0.16)));
+
+const windchill = document.querySelector('#wc')
+
+windchill.textContent = chill;
