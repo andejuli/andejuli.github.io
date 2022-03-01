@@ -36,18 +36,22 @@ fetch(requestURL)
     h2.textContent = `${business.name}`;
 
       // Add/append the section(card) with the h2 element
-    let dob = document.createElement('p');
-    dob.textContent = `Address: ${business.address}`
-    let pob  = document.createElement('p');
-    pob.textContent = `Phone: ${business.phone}`;
+    let address = document.createElement('p');
+    address.textContent = `Address: ${business.address}`
+    let phone  = document.createElement('p');
+    phone.textContent = `Phone: ${business.phone}`;
+    let website  = document.createElement('p');
+    website.textContent = `Website: ${business.website}`;
     let img = document.createElement('img');
     let image_path = `images/${business.image}`
     img.setAttribute('src', image_path);
     img.setAttribute('alt', `${business.name} logo`)
-    card.appendChild(h2);
-    card.appendChild(dob);
-    card.appendChild(pob);
     card.appendChild(img);
+    card.appendChild(h2);
+    card.appendChild(address);
+    card.appendChild(phone);
+    card.appendChild(website);
+    
 
     // Add/append the existing HTML div with the cards class with the section(card)
     document.querySelector('div.cards').appendChild(card);
