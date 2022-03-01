@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
+
+nav {
+	display: grid;
+	margin:1em;
+	background-color: #50514F ;
+    color: white;
+	font-family: "Raleway", serif;
+}
+.navigation {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	align-items: center;
+    flex-direction: column;
+}
+.navigation li:first-child {
+	display: block;
+}
+.navigation li {
+	display: none;
+}
+.navigation a {
+	display: block;
+	padding: 0.75rem;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover {
+	background-color:#247BA0 ;
+}
+/* the onclick JS toggles the .reponsive class from display none (.navigation li) to display block because the responsive class is added to the end of the class list like this in HTML.
+  <ul class="navigation responsive">
+*/
+
+.responsive li {
+	display: block;
+}
+
+
+.event{
+	
+	border: 0.5px solid grey;
+	background-color:whitesmoke;
+	
+}
+
+.hero{
+	
+	border: 0.5px solid grey;
+	background-color:whitesmoke;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+	text-align: left;
+  }
+
+.spotlight{
+	
+	border: 0.5px solid grey;
+	background-color:whitesmoke;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.weather{
+	
+	border: 0.5px solid grey;
+	background-color:whitesmoke;
+
+	
+}
+.join{
+	
+	border: 0.5px solid grey;
+	background-color:whitesmoke;
+
+}
+
+.news{
+	
+	border: 0.5px solid grey;
+	background-color:whitesmoke;
+
+}
+
+
+#image{
+		margin-left: 3em;
+		box-shadow: 5px 5px 5px grey;
+}
+
+
+
+  h1,h2,h3,h4, h5{
+    font-family: "Raleway", serif;
+    font-size: 20px;
+	text-align: left;
+	color:grey;
+	padding: 1em;
+
+  }
+
+
+  footer{
+	padding: 0.75rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin:1em;
+	background-color: #50514F ;
+    color: white;
+	font-family: "Raleway", serif;
+}
+
+#logo{
+	grid-column: 1/2;
+	margin-left: 3em;
+	box-shadow: 5px 5px 5px grey;
+	align-items: right;
+}
+
+.reborn-address{
+	grid-column: 2/3;
+	text-align: left;
+
+
+}
+
+.reborn-email{
+	grid-column: 3/4;
+	text-align: left;
+
+}
+
+.reborn-date{
+	grid-column: 2/4;
+}
+
+.spotlight div:last-child{
+	display:block;
+}
+
+.spotlight div:last-child{
+    display:none;
+    
+}
+/*.navigation {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    gap: 10px;
+
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+  }*/

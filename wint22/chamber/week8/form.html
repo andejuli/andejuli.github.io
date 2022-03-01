@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Practice</title>
+    <style>
+        label, input {display: block;}
+    </style>
+</head>
+<body>
+    <form method="get" action="thankyou.html">
+        <label for="fname">First Name *:</label>
+        <input id="fname" name="firstname" required>
+        <label for="phone">Phone Number:</label>
+        <input id="phone" type="'tel" name="phone" value="208 555-5555">
+        <label for="pw">Password (only letters and at least 7 letters) *:</label>
+        <input id="pw" name="pw" minlength="7" pattern="[- A-Za-z]+" required>
+        <label for="message">Give us a message:</label>
+        <textarea id="message"></textarea>
+        <input type="hidden" name="todaydate" value= "CurrentDate">
+        <label for="level">Enter your Level of Membership</label>
+        <label for="browser">Choose your browser from the list:</label>
+  <input list="browsers" name="browser" id="browser">
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <label for="cars">Choose a car:</label>
+
+    <select name="cars" id="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+    </select>
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+</html>

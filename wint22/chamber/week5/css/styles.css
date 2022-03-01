@@ -214,7 +214,6 @@ nav li:first-child {
 .ham span {
     background-color:#FAD4C8;
     border: 1px solid black;
-    
     width: 38px;
 }
 .ham span:nth-child(1) {

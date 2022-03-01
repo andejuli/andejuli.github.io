@@ -13,13 +13,13 @@
     </style>
 </head>
 <body>
-    <form>
+    <!-- <form>
         <div>
           <label for="bgcolor">Choose background color:</label>
           <input class="color" id="bgcolor" value="0000FF">
-        </div>
+        </div> 
         
-      </form>
+      </form> -->
   
     <h1></h1>
     <picture>
@@ -46,92 +46,212 @@ data-src="https://placekitten.com/300/400" alt="kitten">
     <img src="https://dummyimage.com/300x400/ccc/fff" 
 data-src="https://placekitten.com/300/400" alt="kitten">
 </picture>
-
+<h1>Days since last visited: <span id='diff'></span></h1>
     <script>
+
+        
+        // FIRST MDN example using a placeholder image until AFTER the site finishes building the HTML structure
+        
         const images = document.querySelectorAll('[data-src]');
 
-function preloadImage(img){
-    const source = img.getAttribute("data-src");
-    if(!source) {
-        return;
-    }
-
-    img.src = source; //change the src from placeholder to data-src of kitten image
-}
-
-const options = {
-    threshold: 1, //100% into viewport just so we can see it happening
-    rootMargin: "0px 0px 100px 0px" //so when image is 100 px before viewport
-};
-
-const io = new IntersectionObserver (
-    (entries, io) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                preloadImage(entry.target); //call a function called preloadImage
-                io.unobserve(entry.target); //stop observing it
-            }
+        const loadImages = (image) => {
+            image.setAttribute('src', image.getAttribute('data-src'));
+            image.onload = () => {
+                image.removeAttribute('data-src')
+                console.log('loaded image');
+            };
+        };
+        images.forEach((img) => {
+            loadImages(img);
         });
-}, options);
 
-images.forEach(image => {
-    io.observe(image)
-});
+        // const images = document.querySelectorAll('[data-src]');
 
+        // function preloadingImage(img){
+        //     const source = img.getAttribute('data-src');
+            
+        //     img.src = source;
+        // }
 
+        // const options = {threshold: [.2]};
 
-// First:
+        // const io = new IntersectionObserver (
+        //     (entries, io) => {
+        //         entries.forEach(entry => {
+        //             if(!entry.isIntersecting){
+        //                 return;
+        //             }else{
+        //                 preloadingImage(entry.target);
+        //                 io.unobserve(entry.target);
+        //             }
 
-var body = document.querySelector('body');
+        //             //console.log(entries);
+        //         });
+        //     },
+        //     options
+        // );
 
-
-localStorage.setItem('bgcolor', 'ccc');
-
-var currentColor = localStorage.getItem('bgcolor');
-
-body.style.backgroundColor = '#' + currentColor;
-
-
-
-// Second:
-
-var bgcolorForm = document.getElementById('bgcolor');
-
-
-if(!localStorage.getItem('bgcolor')) {
-  populateStorage();
-} else {
-  setStyles();
-}
-
-function populateStorage() {
-  localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
-
-  setStyles();
-}
-
-function setStyles() {
-  var currentColor = localStorage.getItem('bgcolor');
-  
-
-  document.getElementById('bgcolor').value = currentColor;
-  
-
-  body.style.backgroundColor = '#' + currentColor;
-
-}
-
-bgcolorForm.onchange = populateStorage;
+        // images.forEach(image => {
+        //     io.observe(image);
+        // });
+        
 
 
-// function(timestamp1, timestamp2) {
-//     var difference = timestamp1 - timestamp2;
-//     var daysDifference = Math.floor(difference/1000/60/60/24);
+        // SECOND load only in viewport with Intersection Observer API
+        //The Intersection Observer API lets code register a callback function that is executed whenever an element they wish to monitor enters or exits another element (or the viewport), or when the amount by which the two intersect changes by a requested amount.
 
-//     return daysDifference;
-// }
+        // const images = document.querySelectorAll('[data-src]');
+
+        // let options = {
+        //     threshold: 1.0, //100% into viewport just so we can see it happening (range 0.0 to 1.0)
+        //     rootMargin: "0px" //to grow or shrink each side of root element
+        //     // below is optional (defaults to viewport if not specified) 
+        //     //root: document,querySelector('#scrollArea')
+        // };
+
+        //  let observer = new IntersectionObserver(showImage, options);
+
+
+        // function observeImages(image){
+        //     const source = image.getAttribute('data-src');
+        //     if(!source) {
+        //         return;
+        //     }
+        //     image.src = source;
+        // };
+        
+        
+            
+
+        // function showImage(image, observer){
+        //     image.forEach(entry => {
+        //         if (!entry.isIntersecting) {
+        //             return;
+        //         } else {
+        //             observeImages(entry.target); //call a function called observeImages
+        //             observer.unobserve(entry.target); //stop observing it
+        //         }
+        //     }), options}
+        
+      
+
+
+
+
+        // function preloadImage(img){
+        //     const source = img.getAttribute("data-src");
+        //     if(!source) {
+        //         return;
+        //     }
+
+        //     img.src = source; //change the src from placeholder to data-src of kitten image
+        // }
+
+        // const options = {
+        //     threshold: 1, //100% into viewport just so we can see it happening (range 0.0 to 1.0)
+        //     rootMargin: "0px 0px 100px 0px" //so when image is 100 px before viewport
+        //     // optional: 
+        //     //root: document,querySelector('#scrollArea')
+        // };
+
+        // const io = new IntersectionObserver (
+        //     (entries, io) => {
+        //         entries.forEach(entry => {
+        //             if (!entry.isIntersecting) {
+        //                 return;
+        //             } else {
+        //                 preloadImage(entry.target); //call a function called preloadImage
+        //                 io.unobserve(entry.target); //stop observing it
+        //             }
+        //         });
+        // }, options);
+
+        // images.forEach(image => {
+        //     io.observe(image)
+        // });
+
+
+
+        // First:
+
+        // var body = document.querySelector('body');
+
+
+        // localStorage.setItem('bgcolor', 'ccc');
+
+        // var currentColor = localStorage.getItem('bgcolor');
+
+        // body.style.backgroundColor = '#' + currentColor;
+
+
+
+        // Second:
+
+        // var bgcolorForm = document.getElementById('bgcolor');
+
+
+        // if(!localStorage.getItem('bgcolor')) {
+        // populateStorage();
+        // } else {
+        // setStyles();
+        // }
+
+        // function populateStorage() {
+        // localStorage.setItem('bgcolor', document.getElementById('bgcolor').value);
+
+        // setStyles();
+        // }
+
+        // function setStyles() {
+        // var currentColor = localStorage.getItem('bgcolor');
+        
+
+        // document.getElementById('bgcolor').value = currentColor;
+        
+
+        // body.style.backgroundColor = '#' + currentColor;
+
+        // }
+
+        // bgcolorForm.onchange = populateStorage;
+
+        if(!localStorage.getItem('lastvisit')) {
+            localStorage.setItem('lastvisit', Date.now());
+            document.getElementById('diff').textContent = 'This is your 1st visit';
+        } else {
+            setStyles();
+        }
+
+        function setStyles() {
+            let prevDate = localStorage.getItem('lastvisit');
+            let currDate = Date.now();
+            
+            let difference = currDate - prevDate;
+                console.log(difference);
+                let daysDifference = Math.floor(difference/1000/60/60/24);
+
+            document.getElementById('diff').textContent = daysDifference;
+
+            localStorage.setItem('lastvisit', Date.now());
+        
+        }
+
+        
+
+        // let timestamp1 = Date.now();
+        // let timestamp2 = new Date(2020, 01, 17, 10, 33, 30, 0);
+        // console.log(timestamp2);
+
+        // function diff(timestamp1, timestamp2) {
+            
+        //     let difference = timestamp1 - timestamp2;
+        //     console.log(timestamp2);
+        //     let daysDifference = Math.floor(difference/1000/60/60/24);
+
+        //     return daysDifference;
+        // }
+
+        // console.log(diff(timestamp1, timestamp2));
 
     </script>
 </body>

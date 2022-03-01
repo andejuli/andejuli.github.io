@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Join Page</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon"  href="images/favicon.ico">
+    <style>
+        #content {
+            display: flex;
+            width: 90%;
+            margin: 0 auto;
+        }
+        form {
+            margin: 40px;
+        }
+        form input:required {
+            border-left: red solid 6px;
+        }
+        form input:required:valid {
+            border-left: green solid 6px;
+        }
+        label {
+            font-size: 25px;
+        }
+        label, input {display:block}
+        input, textarea {
+            height: 44px; 
+        }
+        input, textarea{
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 500px;
+        }
+        textarea {
+            height: 100px;
+        }
+        input[type='radio']{ 
+            height: 20px; 
+        }
+        #member {padding-bottom: 20px;}
+        span {
+            font-size: 20px;
+        }
+        #radio {
+            display: grid;
+            grid-template-columns: 60px 100px;
+        }
+        input[type='submit']{ 
+            height: 80px; 
+            width: 75%;
+            font-size: 25px;
+        }
+        #memberinfo {
+            margin: 40px 40px 40px 80px;
+            font-size: 20px;
+        }
+        @media screen and (max-width: 900px) {
+            #content{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+
+
+    <form method="get" action="thankyou.html">
+        <label for="fname">First Name *:</label>
+        <input id="fname" name="firstname" required>
+
+        <label for="lname">Last Name *:</label>
+        <input id="lname" name="lastname" required>
+
+        <label for="title">Business Position Title *:</label>
+        <span>Only letters, dashes and spaces, 7 or more letters</span>
+        <input id="title" name="biztitle" minlength="7" pattern="[- A-Za-z]+" required>
+
+        <label for="email">Email *:</label>
+        <input id="email" name="email" type="email" placeholder="name@domain.com" required>
+
+        <label for="phone">Cell Phone Number *:</label>
+        <input id="phone" name="phone" type="tel" required>
+        
+        <label for="business">Business Name *:</label>
+        <input id="business" name="bizname" required>
+
+        
+            <label id="member">Enter your Level of Membership</label>
+            <div id="radio">
+                <input type="radio" id="one" name="mlevel" value="level1">
+                <label for="one">Level 1</label>
+            
+                <input type="radio" id="two" name="mlevel" value="level2">
+                <label for="two">Level 2</label>
+            
+                <input type="radio" id="three" name="mlevel" value="level3">
+                <label for="three">Level 3</label>
+            
+                <input type="radio" id="four" name="mlevel"
+                value="level4">
+                <label for="four">Level 4</label>
+            </div>
+        
+
+        
+        <label for="message">Business Description:</label>
+        <textarea id="message"></textarea>
+
+        <input id='date' type="hidden" name="todaydate">
+
+
+        
+        <input type="submit" value="Join the Chamber">
+
+    </form>
+    <h1></h1>
+    <div id="memberinfo">
+        <h2>Membership levels benefits</h2>
+        <h3>NP Membership</h3>
+        <ul>
+            <li>For non profit organizations and there is no fee</li>
+        </ul>
+        <h3>Bronze Membership</h3>
+        <ul> 
+            <li>15% discount on events</li>
+            <li>10% discount on advertising</li>
+            <li>Fee of $50/month</li>
+        </ul>
+        <h3>Silver Membership</h3>
+        <ul>
+            <li>25% discount on events</li>
+            <li>15% discount on advertising</li>
+            <li>Free participation in the trade fair</li>
+            <li>Fee of $100/month</li>
+        </ul>
+        <h3>Gold Membership</h3>
+        <ul>
+            <li>50% discount on events</li>
+            <li>50% discount on advertising</li>
+            <li>Free participation in the trade fair</li>
+            <li>5 free featured ads per year</li>
+            <li>1 free training per quarter</li>
+            <li>Fee of $250/month</li>
+        </ul>
+    </div>
+    
+  </div>
+  <script>
+    //   let date = new Date();
+    //     document.querySelector('#date').value = date;
+
+        const date = new Date();
+
+const dateTime = 
+
+    date.getMonth() + ' / ' +
+
+    date.getDate() + ' / ' +
+
+    date.getFullYear() + ' ' +
+
+    date.getHours() + ' : ' +
+
+    date.getMinutes() + ' : ' +
+
+    date.getSeconds()
+
+;
+
+const date = new Date();
+
+const dateTime = {
+
+    "month": date.getMonth(),
+
+    "date": date.getDate(),
+
+    "year": date.getFullYear(),
+
+    "hours": date.getHours(),
+
+    "minutes": date.getMinutes(),
+
+    "seconds": date.getSeconds()
+
+};
+
+//document.querySelector('.time-loaded').value = dateTime
+
+ 
+
+document.querySelector('#business').value = dateTime
+  </script>
+</body>
+</html>
