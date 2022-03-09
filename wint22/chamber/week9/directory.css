@@ -2,24 +2,57 @@
     width: 100%;
     margin: 0 auto;
 } 
+.views {
+    width: 50px;
+    margin: 0 auto;
+    padding: 20px;
+}
+#views_box {
+    text-align: center;
+}
 .cards {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;;
+    
+    justify-content: center;
 }
 .cards section {
     border: 1px solid navy;
     padding: 30px;
-    text-align: center;
+    
     width: 300px;
     margin: 20px;
 }
+
 h2, h1 {
     color: navy;
     text-align: center;
 }
+
 img {
     width: 90%;
     
 }
+table {
+    width: 75%;
+    margin: 50px auto;
+    font-size: 1.2em;
+}
+tr {
+    line-height: 2.5em;
+}
+td {
+    padding: 5px;
+}
+tr:nth-of-type(even){
+    background-color: #ccc;
+}
+table a {
+    color: navy;
+}
+@media screen and (max-width:600px) {
+    tr, td {
+        display: block;
+    }
+    
+ } 
