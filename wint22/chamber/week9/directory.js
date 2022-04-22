@@ -106,7 +106,7 @@ list.addEventListener('click', showList);
 
 
 function reportWindowSize() {
-  if (window.innerWidth > 800 && window.innerWidth < 1000) {
+  if (window.innerWidth > 900 && window.innerWidth < 1100) {
       showList();
   } else {
       showCards();
