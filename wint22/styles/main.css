@@ -28,6 +28,10 @@ nav a {
     padding: 20px;
     text-decoration: none;
     line-height: 1.5em;
+    font-size: 1em;
+}
+li {
+    font-size: 1em;
 }
 nav a:hover {
     color: gray;
