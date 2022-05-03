@@ -1,0 +1,23 @@
+
+svg {
+    position: relative;
+}
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: pink;
+}
+#left, #center, #right {
+    grid-column: 2/3;
+    grid-row: 1/2
+}
+#center, #right {
+    opacity: 0;
+}
+#one, #two, #three, #four {
+    opacity: 0;
+}
+#paras {
+    padding-left: 40px;
+    padding-top: 200px;
+}
