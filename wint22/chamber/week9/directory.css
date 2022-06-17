@@ -50,9 +50,12 @@ tr:nth-of-type(even){
 table a {
     color: navy;
 }
-@media screen and (max-width:600px) {
-    tr, td {
+@media screen and (max-width:900px) {
+
+    .table tr, table td {
         display: block;
-    }
-    
+        border: none;
+        line-height: 2.5rem;
+        text-align: center;
+      }
  } 
