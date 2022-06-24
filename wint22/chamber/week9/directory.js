@@ -5,6 +5,7 @@ function showCards(){
     row.forEach((item) => {
         item.remove();
     });
+
     let section = document.querySelectorAll('section');
         section.forEach((item) => {
         item.remove();
@@ -58,6 +59,7 @@ function showList(){
         section.forEach((item) => {
             item.remove();
     });
+    
     let row = document.querySelectorAll('tr');
         row.forEach((item) => {
         item.remove();

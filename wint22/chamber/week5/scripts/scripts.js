@@ -49,7 +49,7 @@ const parent = document.querySelector('#msg-box');
 
 
 
-if (mydate.getDay() == 1 || mydate.getDay() == 5) {
+if (mydate.getDay() == 1 || mydate.getDay() == 2) {
 
     parent.style.display = 'block';
 }
