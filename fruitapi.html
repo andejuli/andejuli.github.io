@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script defer src="fruitapi.js"></script>
+    <title>Fruit Nutrition</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="phone">Phone:</label><br>
+        <input type="text" id="phone" name="phone"><br>
+        <input type="checkbox" id="fruit1" name="checkbox" value="label">
+        <label for="fruit1" id="f1">loading...</label><br>
+        <input type="checkbox" id="fruit2" name="checkbox" value="label">
+        <label for="fruit2" id="f2">loading...</label><br>
+        <input type="checkbox" id="fruit3" name="checkbox" value="label">
+        <label for="fruit3" id="f3">loading...</label><br><br>
+        <label for="instructions">Special Instructions:</label><br>
+        <input type="text" id="instructions" name="instructions"><br>
+        <button id="submit">Submit Drink</button>
+    </form>
+    <div id="results">
+        <h2 id="nutfact">Nutritional Facts</h2>
+            <p>Calories:</p>
+            <span id="outputcal"></span>
+            <p>Carbohydrates:</p>
+            <span id="outputc"></span>
+            <p>Protein:</p>
+            <span id="outputpro"></span>
+            <p>Fats:</p>
+            <span id="outputfat"></span>
+            <p>Sugar:</p>
+            <span id="outputsug"></span>
+    </div>
+</body>
+</html>
